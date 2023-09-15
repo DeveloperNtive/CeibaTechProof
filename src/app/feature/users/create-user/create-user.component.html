@@ -1,0 +1,30 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = user-create__name, 
+  user-create__name-error, 
+  user-create__job, 
+  user-create__job-error, 
+  user-create__btn-create
+-->
+<div class="container__login">
+  <form class="container__form pa-30" [formGroup]="form">
+    <div class="mb-20">
+      <label for="user-create__name" class="form-label">Name</label>
+      <input type="text" id="user-create__name" class="form-control" placeholder="Name" aria-label="name"
+        aria-describedby="basic-addon1" formControlName="name" (input)="checkButtonAvaliabilty()" required>
+      <div id="user-create__name-error" #createUserNameError>
+        {{nameErrorMessage}}
+      </div>
+    </div>
+    <div class="mb-20">
+      <label for="user-create__job" class="form-label">Job</label>
+      <input type="text" id="user-create__job" class="form-control" placeholder="Job" aria-label="job"
+        aria-describedby="basic-addon1" formControlName="job" (input)="checkButtonAvaliabilty()" required>
+      <div id="user-create__job-error" #createUserJobError>
+        {{jobErrorMessage}}
+      </div>
+    </div>
+    <button id="user-create__btn-create" type="submit" (click)="redirectToListUsers()" disabled
+      #CreateUser>Submit</button>
+  </form>
+</div>

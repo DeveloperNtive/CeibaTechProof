@@ -1,0 +1,13 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = nav-bar__btn-list-user, nav-bar__btn-create-user, nav-bar__btn-logout
+-->
+<div class="container__navbar">
+  <div class="container__buttons">
+    <a id="nav-bar__btn-create-user" href="/users/create">Crear usuario</a>
+    <a id="nav-bar__btn-list-user" href="/users/list">Listar Usuario</a>
+  </div>
+  <div class="container__buttons">
+    <a id="nav-bar__btn-logout" href="/login" (click)="logout()">Cerrar sesion</a>
+  </div>
+</div>

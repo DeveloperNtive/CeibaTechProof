@@ -1,0 +1,25 @@
+.container__navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1ba94c;
+  height: 7vh;
+  min-width: 200px;
+}
+
+#nav-bar__btn-create-user,
+#nav-bar__btn-list-user {
+  color: white;
+}
+#nav-bar__btn-logout {
+  color: #3a424e;
+}
+
+.container__buttons{
+  align-self: center;
+}
+
+a{
+  padding-inline: 20px;
+  font-size: large;
+  font-weight: 700;
+}

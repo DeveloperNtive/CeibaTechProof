@@ -1,0 +1,35 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = login__email, login__password, login__password-error, login__email-error, login__btn-login
+-->
+<div class="container__login">
+  <form class="container__form pa-30" [formGroup]="form">
+    <div class="mb-20">
+      <label for="login__email" class="form-label">Email</label>
+      <input type="email" id="login__email" class="form-control" placeholder="Email" aria-label="Username"
+        aria-describedby="basic-addon1" formControlName="email" required>
+      <span id="login__email-error"
+        *ngIf="form.get('email').errors?.required && (form.get('email').touched || form.get('email').dirty)">Email is
+        required</span>
+    </div>
+    <div class="mb-20">
+      <label for="login__password" class="form-label">Password</label>
+      <input type="password" id="login__password" class="form-control" placeholder="Password" aria-label="Username"
+        aria-describedby="basic-addon1" formControlName="password" minlength="8" required>
+      <div id="login__password-error">
+        <div
+          *ngIf="form.get('password').errors?.required && (form.get('password').touched || form.get('password').dirty)">
+          <span>Password is required</span>
+        </div>
+        <div
+          *ngIf="form.get('password').errors?.minlength && (form.get('password').touched || form.get('password').dirty)">
+          <span>The minimum of characters will be 8</span>
+        </div>
+      </div>
+    </div>
+    <div class="error__container mb-10">
+      <span>{{errorMessage}}</span>
+    </div>
+    <button id="login__btn-login" type="submit" (click)="isValidForm()">Submit</button>
+  </form>
+</div>

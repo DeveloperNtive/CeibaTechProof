@@ -1,0 +1,33 @@
+.container__login {
+  display: flex;
+  height: 93vh;
+  justify-content: center;
+  align-items: center;
+}
+
+div.user-create__name-error,
+div.user-create__job-error {
+  text-align: center;
+}
+
+button {
+  justify-self: center;
+}
+
+.container__form {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  border-radius: 10%;
+  width: 15%;
+  min-width: 215px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+input,
+label {
+  display: block;
+  width: 90%;
+}
